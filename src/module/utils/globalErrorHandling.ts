@@ -1,7 +1,9 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Request, Response } from 'express';
+import { NextFunction, Request, Response } from 'express';
 
-export const globalErrorHandling = (err: any, req: Request, res: Response) => {
+export const globalErrorHandling = (err: any, req: Request, res: Response,next:NextFunction) => {
   const statusCode = 500;
   const message = err.message || 'Something went wrong';
 
