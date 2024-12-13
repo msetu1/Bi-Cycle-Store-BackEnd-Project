@@ -2,7 +2,7 @@
 import { Request, Response } from 'express';
 
 export const globalErrorHandling = (err: any, req: Request, res: Response) => {
-  const statusCode = 5000;
+  const statusCode = 500;
   const message = err.message || 'Something went wrong';
 
   res.status(statusCode).json({
